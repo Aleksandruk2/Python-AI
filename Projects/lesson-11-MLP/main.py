@@ -60,7 +60,7 @@ X_train_tensor = torch.tensor(X_train, dtype=torch.float)
 X_test_tensor = torch.tensor(X_test, dtype=torch.float)
 
 y_train_tensor = torch.tensor(y_train, dtype=torch.long)
-y_test_tensor = torch.tensor(y_train, dtype=torch.long)
+y_test_tensor = torch.tensor(y_test, dtype=torch.long)
 
 
 # Робимо багатошаровий персептрон MLP
@@ -105,7 +105,7 @@ criterion = nn.CrossEntropyLoss() # тут ми виконуємо крос ен
 # Вкиористовується для зміни Ваги нейроної мережі
 # Щоб на наступному етапі можна було врахувати краще вагу і був кращий результат
 optimizer = optim.Adam(model.parameters(), # Параметри поделі
-                       lr=0.01 # швидкість навчання
+                       lr=0.001 # швидкість навчання
                        )
 # Вказуємо параметри навчання
 epochs = 400 # Кількість епох
@@ -141,7 +141,7 @@ for epoch in range(epochs):
     acc_history.append(acc.item()) # для графіків
 
     if epoch % 20 == 0:
-        print(f" - [{epoch+1:3}/{epochs}]")
+        print(f" - [{epoch+1}/{epochs}]")
         print(f" - Loss: {loss.item():.4f}")
         print(f" - Accuracy: {acc.item()*100:.2f}")
 
