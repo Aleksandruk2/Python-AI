@@ -1,4 +1,11 @@
 .idea
 .venv
+.venv.venv
 
+**/MNIST/
 *.csv
+
+**/OxfordPets/
+
+**/pneumonia_predictions.png
+**/pneumonia_resnet18.pth
