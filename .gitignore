@@ -4,6 +4,8 @@
 
 **/MNIST/
 *.csv
+*.png
+*.jpg
 
 **/OxfordPets/
 
