@@ -1,0 +1,6 @@
+path: ./yolo_dataset
+train: images
+val: images
+
+nc: 2
+names: ['cat', 'dog']
